@@ -1,0 +1,36 @@
+$sm:375px;
+$lg: 1440px;
+$md:992px;
+$dark-blue: hsl(233, 26%, 24%);
+$lime-green: hsl(136, 65%, 51%);
+$bright-cyan: hsl(192, 70%, 51%);
+$grayish-blue: hsl(233, 8%, 62%);
+$light-grayish-blue: hsl(220, 16%, 96%);
+$very-light-gray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+$font-size:1.8rem;
+$font-weight-bold:700;
+$font-weight-md: 400;
+$font-weight-lt: 300;
+$font-family: "Public Sans";
+
+*,
+*::before,
+*::after{
+   margin:0;
+   padding:0;
+   box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+    font-size:62.5%;
+}
+body{
+    font-family: $font-family;
+    overflow-x: hidden;
+}
+h2{
+    font-size:3.5rem;
+    font-weight: $font-weight-md;
+    color:$dark-blue;
+}

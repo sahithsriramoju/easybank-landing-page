@@ -1,0 +1,70 @@
+.banner{
+    height:100vh;
+    position: relative;
+    z-index:-1;
+    background-color:$very-light-gray;
+    display: flex;
+    background-image:url('/images/bg-intro-desktop.svg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: top -27rem right -55rem;
+    @media only screen and(max-width:$md){
+        display:flex;
+        flex-direction: column-reverse;
+        
+    }
+    &-h1{
+        font-size:4.5rem;
+        font-weight:$font-weight-md;
+        color:$dark-blue;
+        margin: 1.5rem 0rem;
+    }
+    &-p{
+        font-size: $font-size;
+        font-weight: $font-weight-md;
+        color:$grayish-blue;
+        line-height:1.5;
+        margin: 1.5rem 0rem
+    }
+    &-img{
+        position: absolute;
+        top:-12rem;
+        right:-11rem;
+        @media only screen and(max-width: $md){
+            right:-35rem;
+        }
+    }
+    &__btn{
+        align-self: flex-start;
+        margin: 1.5rem 0rem;
+    }
+    &__container--content{
+        
+
+        padding-right:75rem;
+        padding-left: 15rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @media only screen and(max-width: $md){
+            padding-right:50rem;
+            padding-left: 6rem;
+        }
+        
+    }
+    &__container--image{
+      width: 100%;
+      height: 100%;
+    }
+   /* &--item-2{
+        position: absolute;
+        left:45%;
+        z-index:8;
+        background-image:url('/images/bg-intro-desktop.svg');
+        width:50%;
+        height: 100%;
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: top -10rem right -25rem;
+    }*/
+}

@@ -1,0 +1,36 @@
+.features{
+    background-color: $light-grayish-blue;
+    position: relative;
+    z-index:-2;
+    padding:10rem 15rem;
+    &__heading{
+        padding:0rem 40rem 2.5rem 0rem;
+    }
+    &__grid{
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(20rem,1fr)) ;
+        grid-gap:2.5rem;
+        margin:2rem 0rem;
+    }
+    &__grid-box{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        &>svg{
+            margin:1.5rem 0rem;
+        }
+    }
+    &__title{
+        font-size:2.5rem;
+        font-weight:$font-weight-md;
+        color:$dark-blue;
+        padding:1.8rem 0rem
+    }
+    &-p{
+        font-size:1.5rem;
+        font-weight:$font-weight-md;
+        color:$grayish-blue;
+        padding:1.8rem 0rem;
+        line-height: 1.5;
+    }
+}

@@ -1,0 +1,113 @@
+.header{
+    padding:1.5rem 15rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .1rem solid rgba($grayish-blue,.2);
+    position:sticky;
+    top:0;
+    width:100%;
+    background-color: $white;
+    //z-index:10;
+    @media only screen and(max-width: $md){
+        padding:1.5rem 6rem;
+    }
+    &__logo{
+        //padding:1.5rem 0rem;
+    }
+    &__auxillaries{
+        //padding:1.5rem 0rem;
+        display:block;
+        @media only screen and (max-width:$md){
+            display: none;
+        }
+    }
+ &__burger{
+    display:none;
+    @media only screen and(max-width: $md){
+        display:block;
+        position:relative;
+        
+    }
+    &--layer{
+        display:none;
+        position:absolute;
+        @media only screen and(max-width: $md){
+            display: block;
+            transition: 0.1s ease-in-out all;
+            .menu-visible &{
+                background-color: transparent;
+            }
+        }
+    }
+    &--layer, 
+    &--layer::before,
+    &--layer::after{
+        @media only screen and(max-width: $md){
+        content:'';
+        width:22px;
+        height:2px;
+        background-color:$dark-blue;
+        transition: 0.15s ease-in-out all;
+        }
+    }
+    &--layer::before{
+        @media only screen and(max-width:$md){
+            position: absolute;
+            top:-.5rem;
+
+            .menu-visible &{
+                transform: translateY(.5rem) rotate(45deg);
+            }
+        }
+        
+    }
+    &--layer::after{
+        @media only screen and(max-width:$md){
+            position: absolute;
+            top:.5rem;
+
+            .menu-visible &{
+                transform: translateY(-.5rem) rotate(-45deg);
+            }
+        }
+        
+    }
+   /* &--layer{
+        display:none;
+        @media only screen and(max-width: $md){
+            display:block;
+            position:absolute;
+            transition: 0.15s ease-in-out all;
+            
+        &,&:after,&::before{
+           
+               
+                content:'';
+                width:22px;
+                height:2px;
+                background-color:$dark-blue;
+                transition: 0.15s ease-in-out all;
+            }
+            &::before{
+                position: absolute;
+                top:-.5rem;
+            }
+            &::after{
+                position: absolute;
+                top:.5rem;
+            }
+            .menu-visible &{
+                background-color: transparent;
+            }
+            .menu-visible &::before{
+                transform: translateY(.5rem) rotate(45deg);
+            }
+            .menu-visible &::after{
+                transform: translateY(-.5rem) rotate(-45deg);
+            }
+        }*/
+    }
+  
+ }  
+ 

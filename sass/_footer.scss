@@ -1,0 +1,54 @@
+.footer{
+    background-color:$dark-blue;
+    padding:5rem 15rem;
+    display:flex;
+    @media only screen and(max-width:$sm){
+        padding:2.5rem 2.5rem;   
+        flex-direction: column;
+    }
+    &__btn{
+        align-self: flex-end;
+    }
+    &-box{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &:not(:last-of-type){
+            margin-right:10rem;
+        }
+        &:last-of-type{
+            margin-left: auto;
+        }
+        
+    }
+    &__list{
+        list-style-type: none;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &--item{
+            padding:1rem;
+        }
+    }
+    &--link{
+        &, &:link, &:visited{
+        text-decoration: none;
+        padding:.5rem;
+        color:$very-light-gray;
+        font-size:1.5rem;
+        font-weight:$font-weight-lt;
+        }
+        &:hover, 
+        &:active{
+            color:$lime-green; 
+        }
+        &:hover svg path, &:active svg path{
+            fill:$lime-green;
+        }
+    }
+    &-copyright{
+        color:$grayish-blue;
+        font-size:1.5rem;
+        font-weight:$font-weight-lt;
+    }
+}
